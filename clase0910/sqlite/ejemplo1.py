@@ -13,7 +13,7 @@ class BaseModel(Model):
 
 
 class User(BaseModel):
-    username = CharField(max_length=10)
+    username = CharField(max_length=10, unique=True)
 
 
 plsql.connect()
