@@ -12,7 +12,7 @@ else:
     print(f"Usuario ya existente: {user.username} (id={user.id})")
 
 # Crear un tweet para ese usuario
-tweet = Tweet.create(user=user, message="Tweet de prueba para fgimenez")
+tweet = Tweet.create(user=user, message="Tweet de prueba para alario")
 print(f"Tweet creado: {tweet.message} -- publicado={tweet.is_published}")
 
 # Buscar un tweet cualquiera del usuario
