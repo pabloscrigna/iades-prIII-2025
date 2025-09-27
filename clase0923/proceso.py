@@ -10,5 +10,4 @@ with open("archivo.txt", "w") as file:
 print(f"El valor de x es: {x}")
 
 
-
-sleep(10)
+exit(1)

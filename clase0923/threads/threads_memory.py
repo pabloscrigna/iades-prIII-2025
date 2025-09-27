@@ -15,7 +15,7 @@ def incrementador(nombre):
 
 
 # Crear los hilos
-hilo1 = threading.Thread(target=incrementador, args=("Tarea hilo 2"))
+hilo1 = threading.Thread(target=incrementador, args=("Tarea hilo 1"))
 hilo2 = threading.Thread(target=incrementador, args=("Tarea hilo 2"))
 
 # Iniciamos los hilos
