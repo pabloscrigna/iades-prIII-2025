@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-9=dc5xgr=(4w9tl^dww1bg!325tvg3ta!zyp9q&kfmvd@ufor3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0.0.0.0", "localhost"]
 
 
 # Application definition
@@ -54,7 +54,7 @@ ROOT_URLCONF = "sitio.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ["/home/pablo/Documents/iades/2025/II Cuatrimestre/iades-prIII-2025/django/sitio/sitio/templates/"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -109,7 +109,6 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/

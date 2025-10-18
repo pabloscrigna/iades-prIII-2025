@@ -17,6 +17,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from sitio.views import (
+    mica,
+    saludo,
+    fecha_hora_view,
+    url_dinamica_view,
+    pablo_view,
+    pablo_view_2
+)
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("saludo-inicial/", saludo),
+    path("mica/", mica),
+    path("fecha-hora/", fecha_hora_view),
+    path("alumnos/<int:year>/<str:apellido>", url_dinamica_view),
+    path("template/", pablo_view),
+    path("template-2/", pablo_view_2),
 ]
