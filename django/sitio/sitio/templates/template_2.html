@@ -6,10 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hola, mi nombre es {{ nombre }}!</h1>
+    <h1>Hola, mi nombre es {{ nombres }}!</h1>
+    <p>Tengo {{ edades }} años</p>
     <p>Mi dni es {{ dni }}</p>
     <p style="color:red">Fecha y hora: {{ fecha_hora }}</p>
 
-    
+    {% for nombre in nombres %}
+        <h2>Nombre: {{ nombre }}</h2>
+    {% endfor %}
+
+
+    <h1>Mayores de edad</h1>
+    {% for edad in edades%}
+        {% if edad > 18 %}
+            <h2>Edad: {{edad}}</h2>
+        {% endif %}
+
+    {% endfor %}
+
+    <p>Alumno nombre: {{ alumno.nombre}}</p>
+
+
 </body>
 </html>

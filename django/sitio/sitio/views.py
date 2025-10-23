@@ -46,13 +46,20 @@ def pablo_view(request):
 def pablo_view_2(request):
 
     lista_nombres = ["Juan", "Jose", "Pedro"]
+    lista_edades = [23, 45, 12]
     lista_dni = ["23456789", "4567432", "232422424"]
+
+    alumno = {
+        "nombre": "Pablo",
+        "apellido": "Gonzalez",
+        "dni": "12345678",
+    }
 
     fecha_hora = datetime.now().strftime("%Y-%m-%d -- %H:%M")
 
     plantilla = loader.get_template("template_2.html")
 
-    context = {"nombre": lista_nombres, "dni": lista_dni, "fecha_hora": fecha_hora}
+    context = {"alumno": alumno, "nombres": lista_nombres, "edades": lista_edades, "dni": lista_dni, "fecha_hora": fecha_hora}
 
     return HttpResponse(plantilla.render(context, request))
     
