@@ -62,4 +62,21 @@ def pablo_view_2(request):
     context = {"alumno": alumno, "nombres": lista_nombres, "edades": lista_edades, "dni": lista_dni, "fecha_hora": fecha_hora}
 
     return HttpResponse(plantilla.render(context, request))
-    
+
+
+def pablo_view_3(request, alumno_id):
+
+    from sitio.data import alumnos
+
+    alumno_r = None
+
+    for alumno in alumnos:
+        if alumno["id"] == alumno_id:
+            alumno_r = alumno
+            break
+
+    plantilla = loader.get_template("template_3.html")
+
+    context = {"alumno": alumno_r}
+
+    return HttpResponse(plantilla.render(context, request))
